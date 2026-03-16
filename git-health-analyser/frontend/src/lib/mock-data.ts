@@ -1,0 +1,261 @@
+export const mockRepos = [
+  {
+    id: "1",
+    owner: "fastapi",
+    name: "fastapi",
+    full_name: "fastapi/fastapi",
+    description: "FastAPI framework, high performance, easy to learn",
+    language: "Python",
+    stars_count: 68000,
+    forks_count: 5700,
+    last_analyzed: "2026-03-16T10:30:00Z",
+    analysis_status: "completed",
+    health_score: 87.3,
+    grade: "A",
+    score_delta: 3.2,
+  },
+  {
+    id: "2",
+    owner: "vercel",
+    name: "next.js",
+    full_name: "vercel/next.js",
+    description: "The React Framework",
+    language: "JavaScript",
+    stars_count: 119000,
+    forks_count: 25400,
+    last_analyzed: "2026-03-15T08:00:00Z",
+    analysis_status: "completed",
+    health_score: 92.1,
+    grade: "A+",
+    score_delta: 1.5,
+  },
+  {
+    id: "3",
+    owner: "django",
+    name: "django",
+    full_name: "django/django",
+    description: "The Web framework for perfectionists with deadlines",
+    language: "Python",
+    stars_count: 76000,
+    forks_count: 30000,
+    last_analyzed: "2026-03-14T12:00:00Z",
+    analysis_status: "completed",
+    health_score: 64.5,
+    grade: "C",
+    score_delta: -8.2,
+  },
+];
+
+export const mockHealthScore = {
+  repository: "fastapi/fastapi",
+  health_score: 87.3,
+  grade: "A",
+  trend: "improving",
+  score_delta: 3.2,
+  analyzed_at: "2026-03-16T10:30:00Z",
+  dimensions: {
+    activity: { score: 95, label: "Excellent" },
+    contributors: { score: 82, label: "Healthy" },
+    pr_process: { score: 78, label: "Good" },
+    issue_management: { score: 85, label: "Healthy" },
+    code_stability: { score: 88, label: "Healthy" },
+    knowledge_distribution: { score: 72, label: "Good" },
+    cicd_reliability: { score: 96, label: "Excellent" },
+    release_practice: { score: 90, label: "Excellent" },
+    dependency_health: { score: 80, label: "Healthy" },
+    documentation: { score: 100, label: "Excellent" },
+  },
+  top_risks: [
+    {
+      severity: "warning",
+      category: "knowledge_distribution",
+      message: "Bus factor is 2 for /fastapi/routing/",
+      recommendation: "Encourage more contributors to review routing changes",
+    },
+    {
+      severity: "warning",
+      category: "pr_process",
+      message: "Average PR review time is 26 hours (was 12 hours 30 days ago)",
+      recommendation: "Consider adding more reviewers or setting review time SLAs",
+    },
+    {
+      severity: "info",
+      category: "documentation",
+      message: "Missing CODEOWNERS file",
+      recommendation: "Add a CODEOWNERS file to automate review assignments",
+    },
+  ],
+  key_metrics: {
+    commits_per_week: 28,
+    active_contributors_30d: 15,
+    avg_pr_merge_hours: 18.5,
+    avg_issue_close_days: 4.2,
+    ci_success_rate: 97.3,
+    bus_factor: 3,
+  },
+};
+
+export const mockScoreHistory = [
+  { week: "W05", score: 80 },
+  { week: "W06", score: 82 },
+  { week: "W07", score: 79 },
+  { week: "W08", score: 84 },
+  { week: "W09", score: 83 },
+  { week: "W10", score: 86 },
+  { week: "W11", score: 87.3 },
+];
+
+export const mockCommitAnalytics = {
+  total_commits: 4520,
+  commits_per_week_avg: 28.3,
+  days_since_last_commit: 1,
+  weekly_counts: [
+    { week: "W01", count: 22 },
+    { week: "W02", count: 31 },
+    { week: "W03", count: 18 },
+    { week: "W04", count: 27 },
+    { week: "W05", count: 35 },
+    { week: "W06", count: 24 },
+    { week: "W07", count: 29 },
+    { week: "W08", count: 32 },
+    { week: "W09", count: 26 },
+    { week: "W10", count: 30 },
+    { week: "W11", count: 28 },
+    { week: "W12", count: 33 },
+  ],
+  hourly_distribution: {
+    "9": 420, "10": 580, "11": 620, "12": 350, "13": 480,
+    "14": 620, "15": 590, "16": 520, "17": 380, "18": 210,
+  },
+  daily_distribution: {
+    Monday: 780, Tuesday: 850, Wednesday: 820, Thursday: 790,
+    Friday: 680, Saturday: 320, Sunday: 280,
+  },
+};
+
+export const mockContributorAnalytics = {
+  total_contributors: 547,
+  active_contributors_30d: 15,
+  active_contributors_90d: 38,
+  contribution_evenness: 42.5,
+  top_contributors: [
+    { login: "tiangolo", commits: 1823, prs: 342, last_active: "2026-03-15" },
+    { login: "Kludex", commits: 234, prs: 89, last_active: "2026-03-14" },
+    { login: "adriangb", commits: 156, prs: 67, last_active: "2026-03-12" },
+    { login: "euri10", commits: 98, prs: 45, last_active: "2026-03-10" },
+    { login: "dev-user", commits: 72, prs: 31, last_active: "2026-03-08" },
+  ],
+  activity_timeline: [
+    { week: "W01", active_count: 12, new_count: 1, churned_count: 0 },
+    { week: "W02", active_count: 14, new_count: 3, churned_count: 1 },
+    { week: "W03", active_count: 11, new_count: 0, churned_count: 3 },
+    { week: "W04", active_count: 15, new_count: 4, churned_count: 0 },
+    { week: "W05", active_count: 13, new_count: 1, churned_count: 3 },
+    { week: "W06", active_count: 16, new_count: 5, churned_count: 2 },
+  ],
+};
+
+export const mockPRAnalytics = {
+  total_prs: 3200,
+  open_prs: 45,
+  merged_prs: 2800,
+  closed_without_merge: 355,
+  avg_time_to_merge_hours: 18.5,
+  avg_time_to_first_review_hours: 7.4,
+  avg_comments_per_pr: 2.3,
+  stale_pr_count: 8,
+  stale_pr_percentage: 17.8,
+  merge_rate_percentage: 88.7,
+  weekly_pr_counts: [
+    { week: "W01", opened: 12, merged: 10, closed: 2 },
+    { week: "W02", opened: 15, merged: 13, closed: 1 },
+    { week: "W03", opened: 9, merged: 11, closed: 3 },
+    { week: "W04", opened: 14, merged: 12, closed: 2 },
+    { week: "W05", opened: 18, merged: 15, closed: 1 },
+    { week: "W06", opened: 11, merged: 14, closed: 2 },
+  ],
+  size_distribution: { small: 1200, medium: 1400, large: 480, xlarge: 120 },
+};
+
+export const mockIssueAnalytics = {
+  total_issues: 5800,
+  open_issues: 420,
+  closed_issues: 5380,
+  close_rate_percentage: 92.8,
+  avg_close_time_days: 4.2,
+  avg_first_response_hours: 6.1,
+  stale_issue_count: 45,
+  stale_issue_percentage: 10.7,
+  weekly_issue_counts: [
+    { week: "W01", opened: 18, closed: 22 },
+    { week: "W02", opened: 24, closed: 20 },
+    { week: "W03", opened: 15, closed: 19 },
+    { week: "W04", opened: 21, closed: 25 },
+    { week: "W05", opened: 19, closed: 23 },
+    { week: "W06", opened: 16, closed: 18 },
+  ],
+  label_distribution: {
+    bug: 1800, enhancement: 1200, question: 950, documentation: 420,
+    "good first issue": 310, duplicate: 280, wontfix: 140,
+  },
+};
+
+export const mockCICDAnalytics = {
+  total_workflows: 4,
+  total_runs: 2340,
+  build_success_rate: 97.3,
+  avg_duration_seconds: 245,
+  weekly_success_rates: [
+    { week: "W01", rate: 96.5, total_runs: 42 },
+    { week: "W02", rate: 98.1, total_runs: 48 },
+    { week: "W03", rate: 95.2, total_runs: 38 },
+    { week: "W04", rate: 97.8, total_runs: 45 },
+    { week: "W05", rate: 99.0, total_runs: 52 },
+    { week: "W06", rate: 97.3, total_runs: 44 },
+  ],
+  workflow_details: [
+    { name: "CI Tests", success_rate: 97.8, avg_duration_seconds: 180, total_runs: 1200 },
+    { name: "Lint & Format", success_rate: 99.2, avg_duration_seconds: 45, total_runs: 1200 },
+    { name: "Build Docs", success_rate: 95.1, avg_duration_seconds: 120, total_runs: 500 },
+    { name: "Deploy", success_rate: 98.5, avg_duration_seconds: 300, total_runs: 240 },
+  ],
+};
+
+export const mockRisks = [
+  {
+    severity: "critical",
+    category: "knowledge_distribution",
+    message: "Bus factor is 1 for /src/payments/ — only @alice has committed in 6 months",
+    recommendation: "Schedule knowledge transfer sessions. Assign a second reviewer for all payments PRs.",
+  },
+  {
+    severity: "warning",
+    category: "pr_process",
+    message: "Average PR review time is 26 hours (was 12 hours 30 days ago)",
+    recommendation: "Consider adding reviewers or setting review time SLAs via CODEOWNERS.",
+  },
+  {
+    severity: "warning",
+    category: "dependency_health",
+    message: "3 dependencies have known vulnerabilities",
+    recommendation: "Run npm audit / pip audit and update affected packages.",
+  },
+  {
+    severity: "warning",
+    category: "issue_management",
+    message: "45 stale issues with no activity in 30+ days",
+    recommendation: "Triage stale issues: close invalid ones, label and prioritize the rest.",
+  },
+  {
+    severity: "info",
+    category: "documentation",
+    message: "Missing CODEOWNERS file",
+    recommendation: "Add a CODEOWNERS file to automate review assignments.",
+  },
+  {
+    severity: "info",
+    category: "documentation",
+    message: "Missing CONTRIBUTING guide",
+    recommendation: "Add a CONTRIBUTING.md to help new contributors get started.",
+  },
+];
