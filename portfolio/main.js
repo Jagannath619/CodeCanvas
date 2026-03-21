@@ -667,8 +667,13 @@ function initScrollAnimations() {
     );
   });
 
-  // All other animate-on-scroll elements (NOT in hero)
-  const otherElements = document.querySelectorAll(".animate-on-scroll:not(#hero .animate-on-scroll)");
+  // All other animate-on-scroll elements (NOT in hero, and NOT elements with dedicated stagger animations)
+  const skipClasses = ["project-card", "timeline-item", "achievement-card", "blog-card"];
+  const allScrollEls = document.querySelectorAll(".animate-on-scroll");
+  const otherElements = [...allScrollEls].filter(el => {
+    if (el.closest("#hero")) return false;
+    return !skipClasses.some(cls => el.classList.contains(cls));
+  });
   otherElements.forEach((el) => {
     gsap.fromTo(el,
       { opacity: 0, y: 40 },
@@ -758,6 +763,25 @@ function initScrollAnimations() {
         duration: 0.8,
         stagger: 0.1,
         ease: "back.out",
+      }
+    );
+  }
+
+  // Stagger blog cards
+  const blogCards = document.querySelectorAll(".blog-card");
+  if (blogCards.length > 0) {
+    gsap.fromTo(blogCards,
+      { opacity: 0, y: 40 },
+      {
+        scrollTrigger: {
+          trigger: ".blog-grid",
+          start: "top 80%",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: "power2.out",
       }
     );
   }

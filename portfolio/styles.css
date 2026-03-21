@@ -225,10 +225,11 @@ section {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
   flex: 1;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .nav-menu li {
@@ -237,12 +238,13 @@ section {
 
 .nav-menu a {
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   transition: color var(--transition-base);
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -252,16 +254,18 @@ section {
 .btn-resume {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
+  gap: var(--spacing-xs);
+  padding: 0.6rem 1rem;
   border: 1px solid var(--accent-cyan);
   border-radius: var(--radius-md);
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all var(--transition-base);
+  flex-shrink: 0;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -529,6 +533,10 @@ section {
 }
 
 .about-text {
+  color: var(--text-primary);
+}
+
+.about-content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -537,6 +545,7 @@ section {
 .about-content p {
   font-size: 1.1rem;
   line-height: 1.8;
+  color: var(--text-primary);
 }
 
 .stats-counters {
