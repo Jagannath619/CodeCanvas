@@ -1503,15 +1503,12 @@ section {
    15. ANIMATIONS & UTILITIES
    ============================================================================ */
 
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all var(--transition-slow);
-}
-
+/* Animation is handled by GSAP. This CSS is fallback only.
+   GSAP sets initial opacity/transform via JS, so we do NOT
+   set opacity:0 in CSS to avoid double-hiding conflicts. */
 .animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 #back-to-top {

@@ -486,7 +486,7 @@ function initCustomCursor() {
 function initNavbar() {
   const navbar = document.querySelector("nav");
   const navLinks = document.querySelectorAll("nav a");
-  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+  const mobileMenuBtn = document.querySelector(".mobile-toggle");
   const navMenu = document.querySelector(".nav-menu");
 
   if (!navbar) return;
@@ -658,87 +658,108 @@ function initTypewriter() {
 // ============================================================================
 
 function initScrollAnimations() {
-  // Fade-up animation for all .animate-on-scroll elements
-  const animateElements = document.querySelectorAll(".animate-on-scroll");
+  // Hero elements: animate immediately (they're in viewport on load)
+  const heroElements = document.querySelectorAll("#hero .animate-on-scroll");
+  heroElements.forEach((el, i) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, delay: 0.3 + i * 0.15, ease: "power2.out" }
+    );
+  });
 
-  animateElements.forEach((el, index) => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: el,
-        start: "top 80%",
-        end: "top 50%",
-        scrub: false,
-      },
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      delay: index * 0.1,
-      ease: "power2.out",
-    });
+  // All other animate-on-scroll elements (NOT in hero)
+  const otherElements = document.querySelectorAll(".animate-on-scroll:not(#hero .animate-on-scroll)");
+  otherElements.forEach((el) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 40 },
+      {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: "power2.out",
+      }
+    );
   });
 
   // Stagger project cards
   const projectCards = document.querySelectorAll(".project-card");
   if (projectCards.length > 0) {
-    gsap.from(projectCards, {
-      scrollTrigger: {
-        trigger: ".projects-grid",
-        start: "top 80%",
-      },
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out",
-    });
+    gsap.fromTo(projectCards,
+      { opacity: 0, y: 50 },
+      {
+        scrollTrigger: {
+          trigger: ".projects-grid",
+          start: "top 80%",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: "power2.out",
+      }
+    );
   }
 
   // Stagger skill hexagons
-  const skillHexagons = document.querySelectorAll(".skill-hexagon");
+  const skillHexagons = document.querySelectorAll(".skill-hex");
   if (skillHexagons.length > 0) {
-    gsap.from(skillHexagons, {
-      scrollTrigger: {
-        trigger: ".skills-grid",
-        start: "top 80%",
-      },
-      opacity: 0,
-      scale: 0.8,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: "back.out",
-    });
+    gsap.fromTo(skillHexagons,
+      { opacity: 0, scale: 0.8 },
+      {
+        scrollTrigger: {
+          trigger: ".skills-grid",
+          start: "top 80%",
+        },
+        opacity: 1,
+        scale: 1,
+        duration: 0.6,
+        stagger: 0.05,
+        ease: "back.out",
+      }
+    );
   }
 
   // Stagger timeline items
   const timelineItems = document.querySelectorAll(".timeline-item");
   if (timelineItems.length > 0) {
-    gsap.from(timelineItems, {
-      scrollTrigger: {
-        trigger: ".timeline",
-        start: "top 80%",
-      },
-      opacity: 0,
-      x: -50,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out",
-    });
+    gsap.fromTo(timelineItems,
+      { opacity: 0, x: -30 },
+      {
+        scrollTrigger: {
+          trigger: ".timeline",
+          start: "top 80%",
+        },
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power2.out",
+      }
+    );
   }
 
   // Stagger achievement cards
   const achievementCards = document.querySelectorAll(".achievement-card");
   if (achievementCards.length > 0) {
-    gsap.from(achievementCards, {
-      scrollTrigger: {
-        trigger: ".achievements-grid",
-        start: "top 80%",
-      },
-      opacity: 0,
-      scale: 0.9,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: "back.out",
-    });
+    gsap.fromTo(achievementCards,
+      { opacity: 0, scale: 0.9 },
+      {
+        scrollTrigger: {
+          trigger: ".achievements-grid",
+          start: "top 80%",
+        },
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "back.out",
+      }
+    );
   }
 
   // Refresh ScrollTrigger after all animations are set up
@@ -750,7 +771,7 @@ function initScrollAnimations() {
 // ============================================================================
 
 function initCounters() {
-  const counters = document.querySelectorAll(".counter");
+  const counters = document.querySelectorAll(".counter-number[data-target]");
   const observerOptions = {
     threshold: 0.5,
   };
@@ -1232,19 +1253,26 @@ console.log(
 // In case GSAP fails to load, this ensures elements still animate in
 // ============================================================================
 
+// Fallback: if GSAP somehow fails, ensure elements become visible
 (function initFallbackScrollAnimations() {
+  // Make hero elements visible immediately as safety net
+  document.querySelectorAll("#hero .animate-on-scroll").forEach((el) => {
+    el.classList.add("visible");
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    { threshold: 0.05, rootMargin: "0px 0px -20px 0px" }
   );
 
-  document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+  document.querySelectorAll(".animate-on-scroll:not(#hero .animate-on-scroll)").forEach((el) => {
     observer.observe(el);
   });
 })();
