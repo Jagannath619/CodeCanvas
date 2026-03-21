@@ -506,6 +506,7 @@ section {
 
 .about-image {
   position: relative;
+  max-width: 400px;
 }
 
 .profile-placeholder {
@@ -518,6 +519,13 @@ section {
   justify-content: center;
   overflow: hidden;
   position: relative;
+}
+
+.profile-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
 }
 
 .gradient-border {
