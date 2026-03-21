@@ -1226,3 +1226,25 @@ window.Portfolio = {
 console.log(
   "Portfolio.js loaded - Jagannath Panda | Principal Cloud Architect"
 );
+
+// ============================================================================
+// FALLBACK: CSS-only scroll animations via IntersectionObserver
+// In case GSAP fails to load, this ensures elements still animate in
+// ============================================================================
+
+(function initFallbackScrollAnimations() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+  );
+
+  document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+    observer.observe(el);
+  });
+})();
