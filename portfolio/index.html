@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jagannath Panda - Principal Cloud Architect specializing in multi-cloud platforms, Kubernetes, GenAI, and platform engineering">
+    <meta name="keywords" content="Cloud Architect, AWS, GCP, Azure, Kubernetes, DevOps, Platform Engineering">
+    <meta name="author" content="Jagannath Panda">
+    <title>Jagannath Panda | Principal Cloud Architect</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%23ffffff'>JP</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js (for Vanta) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <!-- Vanta DOTS -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <span class="loader-initials">JP</span>
+            <span class="loader-ring"></span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-monogram">JP</div>
+                <span class="logo-text">Jagannath Panda</span>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="/assets/resume.pdf" class="btn-resume" aria-label="Download resume">
+                Resume <i data-lucide="download" class="icon-small"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" role="region" aria-label="Hero section">
+        <div id="hero-bg" class="hero-bg"></div>
+
+        <div class="hero-content">
+            <div class="hero-label animate-on-scroll">
+                <span class="badge">PRINCIPAL CLOUD ARCHITECT | IBM</span>
+            </div>
+
+            <h1 class="hero-title animate-on-scroll">
+                Jagannath Panda
+            </h1>
+
+            <div class="hero-typewriter animate-on-scroll">
+                <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+            </div>
+
+            <p class="hero-tagline animate-on-scroll">
+                Architecting the Cloud. Engineering the Future.
+            </p>
+
+            <!-- Hero Stats -->
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat-card">
+                    <div class="stat-number">14+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Cloud Platforms</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Enterprise Projects</div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons animate-on-scroll">
+                <a href="#projects" class="btn btn-primary">
+                    View Projects <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="/assets/resume.pdf" class="btn btn-secondary">
+                    Download Resume <i data-lucide="file-down"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Get in Touch <i data-lucide="mail"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">
+                <i data-lucide="chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" role="region" aria-label="About section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+
+            <div class="about-grid">
+                <!-- Profile Image -->
+                <div class="about-image animate-on-scroll">
+                    <div class="profile-placeholder">
+                        <div class="gradient-border"></div>
+                        <img src="/assets/profile.jpg" alt="Jagannath Panda profile photo" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Bio Content -->
+                <div class="about-content">
+                    <p class="about-text animate-on-scroll">
+                        Cloud technology leader with 14+ years architecting enterprise-grade multi-cloud platforms across AWS, Google Cloud Platform, and Microsoft Azure delivering cumulative TCO savings, leading engineer platform teams, and driving digital transformation for financial services, global payments, and consumer technology enterprises.
+                    </p>
+
+                    <p class="about-text animate-on-scroll">
+                        Proven track record in platform engineering, Kubernetes at scale, FinOps governance, and Generative AI integration (Amazon Bedrock, LangChain, RAG pipelines). IIM Kozhikode Senior Management Programme alumnus who bridges deep technical architecture with strategic business outcomes.
+                    </p>
+
+                    <!-- Stats Counter -->
+                    <div class="stats-counters animate-on-scroll">
+                        <div class="counter-item">
+                            <div class="counter-number" data-target="14">14</div>
+                            <div class="counter-label">Years Experience</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" data-target="50">50</div>
+                            <div class="counter-label">Cloud Deployments</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" data-target="342">342</div>
+                            <div class="counter-label">Microservices Managed</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" data-target="600">600</div>
+                            <div class="counter-label">Annual Cost Savings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Timeline -->
+            <div class="career-timeline animate-on-scroll">
+                <h3>Career Highlights</h3>
+
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">2024 - Present</div>
+                            <div class="timeline-title">Technical Cloud Architect</div>
+                            <div class="timeline-company">IBM</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">2022 - 2024</div>
+                            <div class="timeline-title">Principal Engineer</div>
+                            <div class="timeline-company">Coffeebeans Consulting</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">2021 - 2022</div>
+                            <div class="timeline-title">Technical Lead DevOps</div>
+                            <div class="timeline-company">Plansource</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">2011 - 2021</div>
+                            <div class="timeline-title">Cloud & Infrastructure Engineer</div>
+                            <div class="timeline-company">Eagleview, Simplilearn, Adobe, Samsung, TCS</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">2025 - 2026</div>
+                            <div class="timeline-title">Senior Management Programme</div>
+                            <div class="timeline-company">IIM Kozhikode</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills" role="region" aria-label="Skills section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Skills & Expertise</h2>
+            <p class="section-subtitle animate-on-scroll">14+ years of specialized experience across cloud platforms, containerization, and platform engineering</p>
+
+            <!-- Skill Domains -->
+            <div class="skills-grid">
+                <!-- Multi-Cloud Domain -->
+                <div class="skill-domain animate-on-scroll">
+                    <h3 class="domain-title">Multi-Cloud</h3>
+                    <div class="skill-cards">
+                        <div class="skill-hex animate-on-scroll" data-proficiency="95" data-years="14" data-lucide-icon="cloud">
+                            <div class="hex-inner">
+                                <i data-lucide="cloud"></i>
+                                <span>AWS</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">95%</span>
+                                <span class="prof-years">14 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="85" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="cloud-rain"></i>
+                                <span>GCP</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">85%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="80" data-years="7">
+                            <div class="hex-inner">
+                                <i data-lucide="cloud-snow"></i>
+                                <span>Azure</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">80%</span>
+                                <span class="prof-years">7 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="75" data-years="5">
+                            <div class="hex-inner">
+                                <i data-lucide="server"></i>
+                                <span>IBM Cloud</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">75%</span>
+                                <span class="prof-years">5 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kubernetes & DevSecOps Domain -->
+                <div class="skill-domain animate-on-scroll">
+                    <h3 class="domain-title">Kubernetes & DevSecOps</h3>
+                    <div class="skill-cards">
+                        <div class="skill-hex animate-on-scroll" data-proficiency="93" data-years="10">
+                            <div class="hex-inner">
+                                <i data-lucide="box"></i>
+                                <span>EKS/GKE/AKS</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">93%</span>
+                                <span class="prof-years">10 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="90" data-years="9">
+                            <div class="hex-inner">
+                                <i data-lucide="package"></i>
+                                <span>Helm</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">90%</span>
+                                <span class="prof-years">9 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="88" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="git-branch"></i>
+                                <span>ArgoCD</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">88%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="85" data-years="7">
+                            <div class="hex-inner">
+                                <i data-lucide="network"></i>
+                                <span>Istio</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">85%</span>
+                                <span class="prof-years">7 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="92" data-years="12">
+                            <div class="hex-inner">
+                                <i data-lucide="layers"></i>
+                                <span>Docker</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">92%</span>
+                                <span class="prof-years">12 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="82" data-years="6">
+                            <div class="hex-inner">
+                                <i data-lucide="shield"></i>
+                                <span>OpenShift</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">82%</span>
+                                <span class="prof-years">6 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GenAI & ML Domain -->
+                <div class="skill-domain animate-on-scroll">
+                    <h3 class="domain-title">GenAI & ML</h3>
+                    <div class="skill-cards">
+                        <div class="skill-hex animate-on-scroll" data-proficiency="88" data-years="3">
+                            <div class="hex-inner">
+                                <i data-lucide="brain"></i>
+                                <span>Amazon Bedrock</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">88%</span>
+                                <span class="prof-years">3 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="85" data-years="3">
+                            <div class="hex-inner">
+                                <i data-lucide="zap"></i>
+                                <span>LangChain</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">85%</span>
+                                <span class="prof-years">3 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="82" data-years="3">
+                            <div class="hex-inner">
+                                <i data-lucide="search"></i>
+                                <span>RAG Pipelines</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">82%</span>
+                                <span class="prof-years">3 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="80" data-years="4">
+                            <div class="hex-inner">
+                                <i data-lucide="activity"></i>
+                                <span>MLOps</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">80%</span>
+                                <span class="prof-years">4 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="83" data-years="5">
+                            <div class="hex-inner">
+                                <i data-lucide="cpu"></i>
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">83%</span>
+                                <span class="prof-years">5 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Engineering Domain -->
+                <div class="skill-domain animate-on-scroll">
+                    <h3 class="domain-title">Platform Engineering</h3>
+                    <div class="skill-cards">
+                        <div class="skill-hex animate-on-scroll" data-proficiency="84" data-years="3">
+                            <div class="hex-inner">
+                                <i data-lucide="layout"></i>
+                                <span>Backstage</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">84%</span>
+                                <span class="prof-years">3 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="86" data-years="6">
+                            <div class="hex-inner">
+                                <i data-lucide="git-merge"></i>
+                                <span>Flux</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">86%</span>
+                                <span class="prof-years">6 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="91" data-years="10">
+                            <div class="hex-inner">
+                                <i data-lucide="code"></i>
+                                <span>Terraform</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">91%</span>
+                                <span class="prof-years">10 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="85" data-years="6">
+                            <div class="hex-inner">
+                                <i data-lucide="hammer"></i>
+                                <span>Pulumi</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">85%</span>
+                                <span class="prof-years">6 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="89" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="settings"></i>
+                                <span>Ansible</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">89%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="87" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="cloud-cog"></i>
+                                <span>CloudFormation</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">87%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FinOps & Governance Domain -->
+                <div class="skill-domain animate-on-scroll">
+                    <h3 class="domain-title">FinOps & Governance</h3>
+                    <div class="skill-cards">
+                        <div class="skill-hex animate-on-scroll" data-proficiency="86" data-years="5">
+                            <div class="hex-inner">
+                                <i data-lucide="trending-down"></i>
+                                <span>Karpenter</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">86%</span>
+                                <span class="prof-years">5 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="88" data-years="6">
+                            <div class="hex-inner">
+                                <i data-lucide="wallet"></i>
+                                <span>FinOps</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">88%</span>
+                                <span class="prof-years">6 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="87" data-years="7">
+                            <div class="hex-inner">
+                                <i data-lucide="lock"></i>
+                                <span>Zero Trust</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">87%</span>
+                                <span class="prof-years">7 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="90" data-years="9">
+                            <div class="hex-inner">
+                                <i data-lucide="key"></i>
+                                <span>IAM</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">90%</span>
+                                <span class="prof-years">9 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="82" data-years="4">
+                            <div class="hex-inner">
+                                <i data-lucide="shield-check"></i>
+                                <span>OPA/Kyverno</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">82%</span>
+                                <span class="prof-years">4 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="85" data-years="5">
+                            <div class="hex-inner">
+                                <i data-lucide="badge"></i>
+                                <span>SOC 2</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">85%</span>
+                                <span class="prof-years">5 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Observability & SRE Domain -->
+                <div class="skill-domain animate-on-scroll">
+                    <h3 class="domain-title">Observability & SRE</h3>
+                    <div class="skill-cards">
+                        <div class="skill-hex animate-on-scroll" data-proficiency="89" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="bar-chart-3"></i>
+                                <span>Datadog</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">89%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="88" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="meter"></i>
+                                <span>Prometheus</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">88%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="87" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="pie-chart"></i>
+                                <span>Grafana</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">87%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="83" data-years="5">
+                            <div class="hex-inner">
+                                <i data-lucide="rss"></i>
+                                <span>OpenTelemetry</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">83%</span>
+                                <span class="prof-years">5 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="90" data-years="10">
+                            <div class="hex-inner">
+                                <i data-lucide="repeat"></i>
+                                <span>CI/CD</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">90%</span>
+                                <span class="prof-years">10 yrs</span>
+                            </div>
+                        </div>
+                        <div class="skill-hex animate-on-scroll" data-proficiency="86" data-years="8">
+                            <div class="hex-inner">
+                                <i data-lucide="git-pull-request"></i>
+                                <span>GitOps</span>
+                            </div>
+                            <div class="hex-overlay">
+                                <span class="prof-value">86%</span>
+                                <span class="prof-years">8 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Radar Chart -->
+            <div class="radar-chart-container animate-on-scroll">
+                <canvas id="radarChart" width="400" height="400" role="img" aria-label="Skills proficiency radar chart"></canvas>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications animate-on-scroll">
+                <h3 class="certifications-title">Professional Certifications</h3>
+
+                <div class="certifications-grid">
+                    <div class="cert-category">
+                        <h4 class="cert-provider">AWS Certifications (8)</h4>
+                        <ul class="cert-list">
+                            <li><i data-lucide="check-circle"></i> Solutions Architect Professional</li>
+                            <li><i data-lucide="check-circle"></i> DevOps Engineer Professional</li>
+                            <li><i data-lucide="check-circle"></i> Security Specialty</li>
+                            <li><i data-lucide="check-circle"></i> Advanced Networking Specialty</li>
+                            <li><i data-lucide="check-circle"></i> ML Specialty</li>
+                            <li><i data-lucide="check-circle"></i> Data Analytics Specialty</li>
+                            <li><i data-lucide="check-circle"></i> Database Specialty</li>
+                            <li><i data-lucide="check-circle"></i> Solutions Architect Associate</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-category">
+                        <h4 class="cert-provider">Azure Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i data-lucide="check-circle"></i> Solutions Architect Expert (AZ-303)</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-category">
+                        <h4 class="cert-provider">Google Cloud Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i data-lucide="check-circle"></i> Professional Cloud Architect</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-category">
+                        <h4 class="cert-provider">ML & AI Certifications</h4>
+                        <ul class="cert-list">
+                            <li><i data-lucide="check-circle"></i> Google TensorFlow Developer</li>
+                            <li><i data-lucide="check-circle"></i> CNN in TensorFlow</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-category">
+                        <h4 class="cert-provider">Executive Education</h4>
+                        <ul class="cert-list">
+                            <li><i data-lucide="check-circle"></i> IIM Kozhikode Senior Management Programme</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p class="section-subtitle">Enterprise-grade solutions delivered at scale</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate-on-scroll" data-project="1">
+                    <div class="project-card-inner">
+                        <span class="project-category">Multi-Cloud</span>
+                        <h3 class="project-title">Enterprise Multi-Cloud Landing Zone</h3>
+                        <p class="project-subtitle">Palo Alto Cortex Cloud Integration</p>
+                        <p class="project-desc">Architected multi-cloud landing zones (AWS + Azure) with Palo Alto Cortex Cloud security, Backstage IDP, and GitOps pipelines.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Azure</span>
+                            <span class="tech-pill">Terraform</span>
+                            <span class="tech-pill">OpenShift</span>
+                            <span class="tech-pill">Backstage</span>
+                            <span class="tech-pill">OPA</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>2 weeks → 30 min onboarding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card animate-on-scroll" data-project="2">
+                    <div class="project-card-inner">
+                        <span class="project-category">AI/ML</span>
+                        <h3 class="project-title">ML/AIOps Deployment Strategies</h3>
+                        <p class="project-subtitle">Enterprise AI Platform</p>
+                        <p class="project-desc">End-to-end AIOps architecture with Helm-packaged AI microservices, model promotion gates, and responsible AI guardrails.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Kubernetes</span>
+                            <span class="tech-pill">Helm</span>
+                            <span class="tech-pill">ArgoCD</span>
+                            <span class="tech-pill">Tekton</span>
+                            <span class="tech-pill">Backstage</span>
+                            <span class="tech-pill">Terraform</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>50% faster AI deployments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card animate-on-scroll" data-project="3">
+                    <div class="project-card-inner">
+                        <span class="project-category">GCP</span>
+                        <h3 class="project-title">On-Premises to GCP Migration</h3>
+                        <p class="project-subtitle">10M-User Consumer Platform</p>
+                        <p class="project-desc">Led GCP migration with GKE Autopilot, Cloud Run, Cloud SQL via DMS with GDPR-compliant infrastructure.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">GKE</span>
+                            <span class="tech-pill">Cloud Run</span>
+                            <span class="tech-pill">Cloud SQL</span>
+                            <span class="tech-pill">Cloud Armor</span>
+                            <span class="tech-pill">Dataflow</span>
+                            <span class="tech-pill">BigQuery</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>35-50% cost reduction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card animate-on-scroll" data-project="4">
+                    <div class="project-card-inner">
+                        <span class="project-category">AWS</span>
+                        <h3 class="project-title">Enterprise EKS Landing Zone</h3>
+                        <p class="project-subtitle">Fortune-100 Financial Services</p>
+                        <p class="project-desc">EKS landing zone consolidating 342 microservices with four-layer security and continuous SEC/FINRA/OCC compliance.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">EKS</span>
+                            <span class="tech-pill">Cosign</span>
+                            <span class="tech-pill">OPA</span>
+                            <span class="tech-pill">Calico</span>
+                            <span class="tech-pill">Falco</span>
+                            <span class="tech-pill">Backstage</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>99.99% control plane availability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card animate-on-scroll" data-project="5">
+                    <div class="project-card-inner">
+                        <span class="project-category">AWS</span>
+                        <h3 class="project-title">Multi-Region Disaster Recovery</h3>
+                        <p class="project-subtitle">Global Payments Platform</p>
+                        <p class="project-desc">Multi-region DR solution with Aurora Global Database, EKS microservices, and real-time Kinesis streaming.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Aurora</span>
+                            <span class="tech-pill">EKS</span>
+                            <span class="tech-pill">Kinesis</span>
+                            <span class="tech-pill">Global Accelerator</span>
+                            <span class="tech-pill">Route 53</span>
+                            <span class="tech-pill">WAF</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>RTO: 3+ hrs → &lt;30 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card animate-on-scroll" data-project="6">
+                    <div class="project-card-inner">
+                        <span class="project-category">AWS</span>
+                        <h3 class="project-title">Event-Driven Order Fulfillment</h3>
+                        <p class="project-subtitle">Business-Critical at Scale</p>
+                        <p class="project-desc">Re-architected 14-step synchronous monolith into event-driven platform with Step Functions and EventBridge.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Step Functions</span>
+                            <span class="tech-pill">EventBridge</span>
+                            <span class="tech-pill">DynamoDB</span>
+                            <span class="tech-pill">Lambda</span>
+                            <span class="tech-pill">SQS</span>
+                            <span class="tech-pill">X-Ray</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>5,000+ orders/min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card animate-on-scroll" data-project="7">
+                    <div class="project-card-inner">
+                        <span class="project-category">AWS</span>
+                        <h3 class="project-title">Centralized DNS Architecture</h3>
+                        <p class="project-subtitle">Hundreds of VPCs & Accounts</p>
+                        <p class="project-desc">Centralized DNS using Route 53 Profiles with structured namespace hierarchy and Multi-AZ redundancy.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Route 53</span>
+                            <span class="tech-pill">Resolver</span>
+                            <span class="tech-pill">Terraform</span>
+                            <span class="tech-pill">CloudWatch</span>
+                            <span class="tech-pill">VPC</span>
+                            <span class="tech-pill">IAM</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>Zero manual DNS mgmt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card animate-on-scroll" data-project="8">
+                    <div class="project-card-inner">
+                        <span class="project-category">AWS</span>
+                        <h3 class="project-title">Network Firewall with Suricata IPS</h3>
+                        <p class="project-subtitle">Symmetric Traffic Inspection</p>
+                        <p class="project-desc">Deployed AWS Network Firewall with Suricata IPS, Route 53 DNS Firewall, and centralized security monitoring.</p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Network Firewall</span>
+                            <span class="tech-pill">Suricata</span>
+                            <span class="tech-pill">GuardDuty</span>
+                            <span class="tech-pill">Cloud Armor</span>
+                            <span class="tech-pill">WAF</span>
+                            <span class="tech-pill">CloudFormation</span>
+                        </div>
+                        <div class="project-impact">
+                            <i data-lucide="trending-up"></i>
+                            <span>40% fewer manual ops</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Modal -->
+            <div id="project-modal" class="project-modal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <button class="modal-close" aria-label="Close"><i data-lucide="x"></i></button>
+                    <div class="modal-body" id="modal-body"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mar 2024 – Present</span>
+                        <h3 class="timeline-role">Technical Cloud Architect</h3>
+                        <h4 class="timeline-company"><i data-lucide="building-2"></i> IBM, Bengaluru</h4>
+                        <ul class="timeline-highlights">
+                            <li>Architecting multi-cloud landing zones with Palo Alto Cortex Cloud security</li>
+                            <li>Designing AIOps platforms with Helm, Backstage, and GitOps delivery</li>
+                            <li>Leading cross-functional alignment across IBM, client CTO/CISO leadership</li>
+                            <li>Packaging solutions as reusable practice accelerators for pre-sales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2022 – Mar 2024</span>
+                        <h3 class="timeline-role">Principal Engineer</h3>
+                        <h4 class="timeline-company"><i data-lucide="building-2"></i> Coffeebeans Consulting, Bengaluru</h4>
+                        <ul class="timeline-highlights">
+                            <li>Led GCP migration of 10M-user platform (GKE Autopilot, Cloud Run, Cloud SQL)</li>
+                            <li>Designed EKS landing zone for Fortune-100 bank (342 microservices)</li>
+                            <li>Established CIS Kubernetes Benchmark compliance for financial services</li>
+                            <li>Built reusable migration and financial services accelerators</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 2021 – May 2022</span>
+                        <h3 class="timeline-role">Technical Lead DevOps</h3>
+                        <h4 class="timeline-company"><i data-lucide="building-2"></i> Plansource, Bengaluru</h4>
+                        <ul class="timeline-highlights">
+                            <li>Architected multi-region DR for global payments (Aurora Global Database, EKS)</li>
+                            <li>Reduced RTO from 3+ hours to under 30 minutes with PCI DSS compliance</li>
+                            <li>Built event-driven order fulfillment breaking 5,000 orders/min ceiling</li>
+                            <li>Managed $2.1M infrastructure budget with 34% cost optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 2011 – Aug 2021</span>
+                        <h3 class="timeline-role">Cloud & Infrastructure Engineer</h3>
+                        <h4 class="timeline-company"><i data-lucide="building-2"></i> Eagleview | Simplilearn | Adobe | Samsung | TCS</h4>
+                        <ul class="timeline-highlights">
+                            <li>Centralized DNS across hundreds of VPCs using Route 53 Profiles</li>
+                            <li>Deployed AWS Network Firewall with Suricata IPS</li>
+                            <li>Pioneered IaC adoption (CloudFormation), containerization strategy</li>
+                            <li>Built cloud security automation with Python/Boto3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Achievements & Recognition</h2>
+            </div>
+
+            <div class="achievements-grid">
+                <!-- Achievement 1 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="award"></i></div>
+                    <h3 class="achievement-title">8x AWS Certified</h3>
+                    <p class="achievement-desc">Solutions Architect Pro, DevOps Pro, Security, Networking, ML, Data Analytics, Database, SA Associate</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> 2018-2024</span>
+                        <span class="achievement-issuer">Amazon Web Services</span>
+                    </div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="cloud"></i></div>
+                    <h3 class="achievement-title">Azure Solutions Architect Expert</h3>
+                    <p class="achievement-desc">AZ-303 Certification</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> 2022</span>
+                        <span class="achievement-issuer">Microsoft Azure</span>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="server"></i></div>
+                    <h3 class="achievement-title">GCP Professional Cloud Architect</h3>
+                    <p class="achievement-desc">Google Cloud certification</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> 2023</span>
+                        <span class="achievement-issuer">Google Cloud</span>
+                    </div>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="graduation-cap"></i></div>
+                    <h3 class="achievement-title">IIM Kozhikode SMP</h3>
+                    <p class="achievement-desc">Senior Management Programme - Strategic management, business leadership</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> 2025-2026</span>
+                        <span class="achievement-issuer">IIM Kozhikode</span>
+                    </div>
+                </div>
+
+                <!-- Achievement 5 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="package"></i></div>
+                    <h3 class="achievement-title">Practice Builder</h3>
+                    <p class="achievement-desc">Created reusable architecture accelerators adopted across IBM and Coffeebeans practices</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> 2022-Present</span>
+                        <span class="achievement-issuer">IBM & Coffeebeans</span>
+                    </div>
+                </div>
+
+                <!-- Achievement 6 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="mic"></i></div>
+                    <h3 class="achievement-title">Technical Speaker</h3>
+                    <p class="achievement-desc">IBM Cloud COE sessions on multi-cloud, platform engineering, and FinOps governance</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> Ongoing</span>
+                        <span class="achievement-issuer">IBM Internal</span>
+                    </div>
+                </div>
+
+                <!-- Achievement 7 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="dollar-sign"></i></div>
+                    <h3 class="achievement-title">Enterprise FinOps Leader</h3>
+                    <p class="achievement-desc">Saved $600K+ annually across 180 AWS accounts through comprehensive cost optimization</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> 2023</span>
+                        <span class="achievement-issuer">Client Engagement</span>
+                    </div>
+                </div>
+
+                <!-- Achievement 8 -->
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon"><i data-lucide="brain"></i></div>
+                    <h3 class="achievement-title">TensorFlow Developer</h3>
+                    <p class="achievement-desc">Google TensorFlow Developer Certificate & CNN specialization</p>
+                    <div class="achievement-meta">
+                        <span class="achievement-year"><i data-lucide="calendar"></i> 2021</span>
+                        <span class="achievement-issuer">Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Articles</h2>
+                <p class="section-subtitle">Insights from the field</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-inner">
+                        <span class="blog-tag coming-soon">Coming Soon</span>
+                        <h3 class="blog-title">Multi-Cloud Landing Zones: Lessons from the Enterprise Trenches</h3>
+                        <p class="blog-excerpt">Deep dive into architecting multi-cloud landing zones across AWS and Azure with enterprise security patterns.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date"><i data-lucide="calendar"></i> Mar 2026</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-inner">
+                        <span class="blog-tag coming-soon">Coming Soon</span>
+                        <h3 class="blog-title">Why Every Platform Team Needs an Internal Developer Platform</h3>
+                        <p class="blog-excerpt">Exploring IDP patterns, Golden Paths, and how to accelerate developer velocity at scale with Backstage.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date"><i data-lucide="calendar"></i> Apr 2026</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-card-inner">
+                        <span class="blog-tag coming-soon">Coming Soon</span>
+                        <h3 class="blog-title">FinOps at Scale: Saving $600K Across 180 AWS Accounts</h3>
+                        <p class="blog-excerpt">Practical strategies for cost optimization, tagging governance, and reserved instance optimization across enterprise.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date"><i data-lucide="calendar"></i> May 2026</span>
+                            <span class="blog-read-time">12 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your cloud architecture challenges</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <div class="info-icon"><i data-lucide="mail"></i></div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:jagannath.panda619@gmail.com">jagannath.panda619@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon"><i data-lucide="phone"></i></div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+917411261916">+91-7411261916</a></p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                        <h4>Location</h4>
+                        <p>Bengaluru, India</p>
+                    </div>
+
+                    <div class="contact-info-card social-links">
+                        <h4>Connect</h4>
+                        <div class="social-icons">
+                            <a href="https://linkedin.com/in/jagannathpanda" aria-label="LinkedIn" target="_blank"><i data-lucide="linkedin"></i></a>
+                            <a href="https://github.com/jagannathpanda" aria-label="GitHub" target="_blank"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card availability">
+                        <h4>Currently Open To</h4>
+                        <p>Staff Architect / Practice Lead / Cloud Advisory roles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-logo">Jagannath Panda</h4>
+                    <p>Enterprise Cloud Architect</p>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Social</h5>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/jagannathpanda" aria-label="LinkedIn" target="_blank"><i data-lucide="linkedin"></i></a>
+                        <a href="https://github.com/jagannathpanda" aria-label="GitHub" target="_blank"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jagannath Panda. All rights reserved.</p>
+                <p>Built with precision. Deployed on Vercel.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
